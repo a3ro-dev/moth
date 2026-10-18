@@ -1,0 +1,10 @@
+.venv/
+node_modules/
+dist/
+__pycache__/
+*.log
+# user-owned audio, reference reels and everything derived from them stay local
+data/
+music/
+refs/
+old_index.html
