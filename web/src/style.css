@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "./dither-kit/theme.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+/* MOTH's booth: warm black hardware, amber lamp */
+.dark {
+  --background: #0a0908;
+  --card: #12100e;
+  --popover: #15120f;
+  --muted: #1c1915;
+  --muted-foreground: #8d857a;
+  --foreground: #ece7dc;
+  --border: #2b2722;
+  --accent: #b36b00;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  * { border-color: var(--border); scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+  html, body { height: 100%; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+}
