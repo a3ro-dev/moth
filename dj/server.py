@@ -137,6 +137,9 @@ def mix(req: MixReq):
                    "listen": "listening for the hooks"}.get(kind)
             if kind == "rules":
                 msg = f"rule check {data['score']}/100" + (f" - {data['violations'][0]['message']}" if data["violations"] else "")
+            if kind == "preview":
+                job["preview"] = data
+                msg = f"take {data['round'] + 1} is on the decks: press play. i'm listening back and revising"
             job["events"].append({"t": time.time(), "kind": kind, "msg": msg})
         return ev
 

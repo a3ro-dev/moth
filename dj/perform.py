@@ -154,6 +154,9 @@ def session(ids, brief, name, rounds=1, on_event=lambda *_: None) -> dict:
         on_event("render", rnd)
         kn = learn.knobs()
         res = routine.render_routine(r, f"{name}_v{rnd}", knobs=kn)
+        # playable now: the user listens while the critic and the revision run (first sound at ~7 min, not ~20)
+        on_event("preview", {"story": r.get("story"), "plan": r, "mix": res, "critiques": [], "score": None,
+                             "rules": chk, "history": [], "round": rnd})
         on_event("critique", rnd)
         c = critique(res, d, r)
         learn.log_take(res["name"], ids, r, res["metrics"], chk["score"], critic=c["weighted"], knobs=kn,
