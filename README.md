@@ -5,7 +5,7 @@ Takes two records and performs them like a DJ: Demucs stems, Beat This! beat gri
 Bring your own audio: put files in `music/` (not tracked).
 
 ```
-python -m venv .venv && .venv/Scripts/pip install -r requirements.txt   # see dj/ imports
+python -m venv .venv   # then pip install what dj/ imports (torch, demucs, beat_this, openai-whisper, librosa, fastapi, uvicorn)
 cd web && npm i && npm run build
 .venv/Scripts/python -m uvicorn server:app --app-dir dj --port 8077
 ```
