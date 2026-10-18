@@ -1,1 +1,0 @@
-{"version":"0.0.1","configurations":[{"name":"moth","runtimeExecutable":".venv/Scripts/python.exe","runtimeArgs":["-m","uvicorn","server:app","--app-dir","dj","--port","8077"],"port":8077}]}

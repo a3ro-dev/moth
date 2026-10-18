@@ -61,7 +61,6 @@ expect ~15 min a session. most of that is gemini planning.
 | `dj/` | the engine: analysis, stems, lyrics, planner, sequencer, console, metrics, server |
 | `web/` | vue deck ui, built on [dither-ui](https://dither-ui.com) (vendored in `web/src/dither-kit`, mit) |
 | `skills/dj-craft/` | the craft notes the planner reads: principles, rubric, routines |
-| `HANDOFF.md` | current state, numbers, gotchas, next steps |
 
 ## what's not working yet
 
@@ -69,5 +68,3 @@ expect ~15 min a session. most of that is gemini planning.
 - **lyrics are whisper-only.** it mishears sung hooks ("fast and furious" came out as "fast and play-o"). forced alignment against real synced lyrics should be better.
 - **slow.** gemini planning is most of a session, and a hard-rule bounce costs a full replan.
 - windows-tested only.
-
-`HANDOFF.md` has the details and the order i'd do them in.
